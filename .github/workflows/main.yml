@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context : .
-          dockerfile : ./python-docker-dev-example/Dockerfile
+          dockerfile : Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:lates
